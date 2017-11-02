@@ -1,1 +1,5 @@
-print(1 + 1)
+class YksPlusYks:
+
+    def laskuri(self):
+
+        print(1 + 1)
