@@ -1,3 +1,3 @@
 # SlowNLP
 
-Repository for Building NLP Applications Course
+Repository for "Building NLP Applications" Course
