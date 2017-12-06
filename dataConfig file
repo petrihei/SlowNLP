@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<dataConfig>    
+  <dataSource type="FileDataSource" encoding="UTF-8" />    
+  <document>        
+      <entity name="page"   
+      processor="XPathEntityProcessor"   
+      stream="true"   
+      forEach="/mediawiki/page/"            
+      url="[local address]"            
+      transformer="RegexTransformer,DateFormatTransformer"   
+      > 
+    
+    <!-- We'll only need the title field -->
+    <field column="id"        xpath="/mediawiki/page/id" />        
+    <field column="title"     xpath="/mediawiki/page/title" />
+    
+    </entity>        
+    </document>
+</dataConfig>
