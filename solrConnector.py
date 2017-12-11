@@ -13,12 +13,9 @@ def title_query(word):
 
 def get_results(word):
 
-    url_start = "http://localhost:8983/solr/latin/select?q="
-    url_middle = title_query(word)
-    url_end = "&wt=python"
-
-    url = url_start + url_middle + url_end
-
+    # look for the closest matches
+    query = word+'~'
+    url = 'http://localhost:8983/solr/latin/select?q=title:('+query+')&wt=python'
     connection = urlopen(url)
     response = eval(connection.read())
 
