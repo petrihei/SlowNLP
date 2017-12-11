@@ -11,5 +11,5 @@ class Ui:
             l = logic.Logic(search_word)
             print(l.return_result_list())
             lat = latinInspector.LatinInspector(search_word, l.return_result_list())
-            percentage = lat.calculate_percentage()
+            percentage = lat.calculate_percentage()*100
             print("The word " + search_word + " is " + str(percentage) + " percent latin.")
