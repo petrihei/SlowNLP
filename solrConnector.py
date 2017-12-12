@@ -5,12 +5,6 @@ def title_query(word):
     return "(title:" + word + ")"
 
 
-
-# how many documents found
-# print(response['response']['numFound'], "documents found.")
-
-# Print the name of each document.
-
 def get_results(word):
 
     # look for the closest matches
