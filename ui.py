@@ -6,6 +6,7 @@ class Ui:
     def search(self):
         print('This highly sophisticated program finds out whether an English word has Latin roots.\nTo exit, type "stop".')
         search_word = input("English word: ")
+
         while search_word.lower() != "stop":
             l = logic.Logic(search_word)
             latin_word = ''.join(l.return_result_list())
