@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+
+<dataConfig>
+    <dataSource type="FileDataSource" encoding="UTF-8" />
+    <document>
+        <entity name="page"
+			processor="XPathEntityProcessor"
+			stream="true"
+			forEach="/mediawiki/page/"
+            url="C:\Users\Johanna\solr-7.1.0\server\solr\latin\input\lawiktionary-latest-pages-articles.xml"
+            transformer="RegexTransformer,DateFormatTransformer"
+			>
+        <field column="id"        xpath="/mediawiki/page/id" />
+        <field column="title"     xpath="/mediawiki/page/title" />
+		<field column="revision"  xpath="/mediawiki/page/revision/id" />
+		<field column="text"      xpath="/mediawiki/page/revision/text" />
+		<field column="$skipDoc"  regex="^#REDIRECT .*" replaceWith="true" sourceColName="text"/>
+
+
+    </entity>    
+    </document>
+</dataConfig>
