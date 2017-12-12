@@ -6,7 +6,7 @@ class LatinInspector:
         self.results = results
         self.percentage = 0.0
 
-    # Calculate the similarity ratio between the search word and the result
+    # Calculate the similarity ratio between the search word and the search result
 
     def calculate_percentage(self):
         if len(self.results) != 0:
