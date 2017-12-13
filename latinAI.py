@@ -1,6 +1,6 @@
 import ui
 
 ui = ui.Ui()
-ui.search()
+ui.get_user_input()
 
 
