@@ -5,11 +5,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/SlowNLP.iml" afterPath="$PROJECT_DIR$/.idea/SlowNLP.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/crawler.py" afterPath="$PROJECT_DIR$/crawler.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/latinInspector.py" afterPath="$PROJECT_DIR$/latinInspector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/logic.py" afterPath="$PROJECT_DIR$/logic.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/solrConnector.py" afterPath="$PROJECT_DIR$/solrConnector.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ui.py" afterPath="$PROJECT_DIR$/ui.py" />
     </list>
     <ignored path="$PROJECT_DIR$/.idea/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -81,7 +76,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ui.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ui.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ui.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="149">
@@ -93,7 +88,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="solrConnector.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="solrConnector.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/solrConnector.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="217">
@@ -518,7 +513,14 @@
       <option name="project" value="LOCAL" />
       <updated>1510234323853</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Vähän muutoksia&#10;">
+      <created>1513539420982</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1513539420982</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -632,7 +634,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="updated readme" />
     <MESSAGE value="muutin luokaksi&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="muutin luokaksi&#10;" />
+    <MESSAGE value="Vähän muutoksia&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vähän muutoksia&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -881,14 +884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/solrConnector.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ui.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="149">
@@ -896,6 +891,14 @@
           <folding>
             <element signature="e#0#12#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/solrConnector.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="14" column="19" lean-forward="false" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>
