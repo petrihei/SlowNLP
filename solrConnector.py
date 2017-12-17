@@ -1,8 +1,5 @@
 from urllib.request import urlopen
 
-def title_query(word):
-
-    return "(title:" + word + ")"
 
 
 def get_results(word):
@@ -15,6 +12,8 @@ def get_results(word):
     response = eval(connection.read())
 
     results = []
+    description = ''
     for document in response['response']['docs']:
         results.append(document['title'])
-    return results
+        description = document['text']
+    return results, description

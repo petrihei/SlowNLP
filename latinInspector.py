@@ -1,4 +1,5 @@
 import difflib
+
 class LatinInspector:
 
     def __init__(self, word, results):

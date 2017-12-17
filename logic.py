@@ -9,11 +9,15 @@ class Logic():
     def __init__(self, user_input):
         self.user_input = user_input
         self.english_lemma = ""
-        self.results = solrConnector.get_results(user_input)
+        self.results, self.description = solrConnector.get_results(user_input)
         self.lemmatised_token_list = []
+
 
     def get_result_list(self):
         return self.results
+
+    def get_solr_description(self):
+        return self.description
 
     def get_lemmatised_token_list(self):
         stop = set(stopwords.words('english'))
@@ -36,7 +40,6 @@ class Logic():
         english_word = self.user_input
         stemmer = SnowballStemmer("english")
         self.english_lemma = stemmer.stem(english_word)
-
         return self.english_lemma
 
 

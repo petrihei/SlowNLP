@@ -3,6 +3,7 @@ import latinInspector
 import crawler
 from nltk import word_tokenize
 from nltk.corpus import stopwords
+import re
 
 class Ui:
 
@@ -10,7 +11,7 @@ class Ui:
 
         self.word = ""
         self.sentence = ""
-        print('This highly sophisticated AI finds out whether an English word has Latin roots.')
+        print('This highly sophisticated AI finds out whether an English word has Latin roots.\n')
 
     def get_user_input(self):
         print("0 - stop the application")
@@ -32,7 +33,7 @@ class Ui:
         elif user_input == "3":
             self.chat()
         else:
-            print("Wrong command. Try again.")
+            print("Invalid command. Please try again.")
             self.get_user_input()
 
     def search_word(self, word):
@@ -41,9 +42,9 @@ class Ui:
         lat = latinInspector.LatinInspector(word, l.get_result_list())
         percentage = lat.calculate_percentage_word()*100
         if percentage <= 50.0:
-            print("This word probably doesn't have Latin roots.")
+            print("\nThis word probably doesn't have Latin roots.\n")
         else:
-            print("The word \"" + word + "\" is " + str(percentage) + " percent latin.")
+            print("\nThe word \"" + word + "\" is " + str(percentage) + " percent latin.")
             print("The closest Latin match is \"" + latin_word + "\".\n")
             self.crawl(latin_word)
         self.get_user_input()
@@ -66,9 +67,21 @@ class Ui:
         self.get_user_input()
 
     def crawl(self, latin_word):
-        print("English definitions for word " + latin_word + " are:")
-        for definition in crawler.get_english_definitions(latin_word):
-            print(definition)
+        print("English definitions for word " + latin_word + " include:\n")
+        l = logic.Logic(latin_word)
+        description = l.get_solr_description()
+        latin_description = ''.join(description)
+        if 'Anglice' in latin_description:
+            desc = re.findall(r'Anglice:\s(.*)', latin_description)
+            for d in desc:
+                d1 = re.sub(r'{{t\+\|en|}', '', d)
+                d2 = re.sub('\|', '', d1)
+                print(d2)
+            print('')
+        else:
+            for definition in crawler.get_english_definitions(latin_word):
+                print(definition)
+        print('...Well, draw your own conclusions.\n')
 
     def chat(self):
         print('\"finis\" quits the chat')
