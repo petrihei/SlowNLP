@@ -81,7 +81,7 @@ class Ui:
         else:
             for definition in crawler.get_english_definitions(latin_word):
                 print(definition)
-        print('...Well, draw your own conclusions.\n')
+        print('')
 
     def chat(self):
         print('\"finis\" quits the chat')
