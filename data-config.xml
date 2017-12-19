@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?> 
+?xml version="1.0" encoding="UTF-8"?>
 
 <dataConfig>
     <dataSource type="FileDataSource" encoding="UTF-8" />
@@ -13,8 +13,13 @@
         <field column="id"        xpath="/mediawiki/page/id" />
         <field column="title"     xpath="/mediawiki/page/title" />
 		<field column="revision"  xpath="/mediawiki/page/revision/id" />
-		<field column="text"      xpath="/mediawiki/page/revision/text" />
-		<field column="$skipDoc"  regex="^#REDIRECT .*" replaceWith="true" sourceColName="text"/>
+		<field column="text"      xpath="/mediawiki/page/revision/text" />	
+		<field column="comment"      xpath="/mediawiki/page/revision/comment" />
+		
+		<!-- This line removes old Wiktionary interlinks and prevents indexing of non-Latin entries.
+		Unfortunately it also removes some Latin entries. -->
+		
+		<field column="$skipDoc"  regex="^Bot: .*" replaceWith="true" sourceColName="comment"/>
 
 
     </entity>    
