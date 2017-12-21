@@ -25,11 +25,17 @@ Creating Solr index for the application
 Installing
 
 Clone the LatinAI repository, i.e. the following files:
+
 • latinAI.py
+
 • latinInspector.py
+
 • logic.py
+
 • crawler.py
+
 • ui.py
+
 • solrConnector.py
 
 Running the application
