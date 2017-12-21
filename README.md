@@ -9,7 +9,9 @@ Installation
 Prerequisities
 
 • You must have Solr installed in your computer (the version used in the application was 7.1.0; earlier versions have not been tested). You can download it here:http://mirror.netinch.com/pub/apache/lucene/solr/7.1.0/
+
 • You must have the Latin Wiktionary dump downloaded. You can find the latest dump here:https://dumps.wikimedia.org/lawiktionary/latest/
+
 • You must have a working Internet connection for the application to search for the translations in an online dictionary.
 
 Creating Solr index for the application
