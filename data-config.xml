@@ -7,7 +7,7 @@
 			processor="XPathEntityProcessor"
 			stream="true"
 			forEach="/mediawiki/page/"
-            url="C:\Users\Johanna\solr-7.1.0\server\solr\latin\input\lawiktionary-latest-pages-articles.xml"
+            url="[path in the local computer]\lawiktionary-latest-pages-articles.xml"
             transformer="RegexTransformer,DateFormatTransformer"
 			>
         <field column="id"        xpath="/mediawiki/page/id" />
