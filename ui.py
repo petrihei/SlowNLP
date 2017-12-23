@@ -26,10 +26,14 @@ class Ui:
             exit()
         elif user_input == "1":
             self.word = input("English word: ")
+            while not self.validate_word(self.word):
+                print("Invalid word. Please try again.")
+                self.word = input("English word: ")
             self.search_word(self.word)
         elif user_input == "2":
             self.sentence = input("English sentence: ")
             self.search_sentence(self.sentence)
+            self.get_user_input()
         elif user_input == "3":
             self.chat()
         else:
@@ -64,7 +68,7 @@ class Ui:
         average_percentage = total_percentage / index
         print("\nEnglish sentence " + "'" + self.sentence + "' is " + str(average_percentage) +
               " percent latin\n")
-        self.get_user_input()
+        return average_percentage
 
     def crawl(self, latin_word):
         print("English definitions for word " + latin_word + " include:\n")
@@ -90,3 +94,11 @@ class Ui:
             print("Nullo intellego! Ask something else")
             user_input = input("")
         self.get_user_input()
+
+    def validate_word(self, word):
+        validator = False
+        matchObj = re.match(r'^\S*[a-zA-Z]+\S$', word)
+        if matchObj:
+            validator = True
+        return validator
+
